@@ -24,7 +24,16 @@ def convex_hull(points):
 
         # Remove points that would cause a right (clockwise) turn.
         while len(hull) >= 2 and orientation(hull[-2], hull[-1], p) <= 0:
-            hull. Pop()
-        hull. Append(p)
+            hull. pop()
+        hull. append(p)
 
     return hull
+
+# Example points
+
+points = [(0, 3), (1, 1), (2, 2), (4, 4),
+          (0, 0), (1, 2), (3, 1), (3, 3)]
+
+hull = convex_hull(points)
+
+print("Convex Hull Points (in order):", hull)
